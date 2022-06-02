@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ml_gateway:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ".:/app"
+    container_name: ml_gateway
+    image: ml_gateway:latest
+    env_file:
+      - .env
